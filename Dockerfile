@@ -1,7 +1,6 @@
 FROM ruby:2.6.4
 
 RUN curl -L https://packagecloud.io/github/git-lfs/gpgkey | apt-key add - \
-    && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && apt-get update \
     && apt-get install -y ca-certificates \
     && yum update ca-certificates \
