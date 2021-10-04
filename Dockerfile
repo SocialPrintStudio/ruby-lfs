@@ -1,5 +1,9 @@
 FROM ruby:2.6.4-buster
 
+RUN apt-get install -y ca-certificates \
+    && apt-get install -y libgnutls30 \
+    && apt-get update 
+
 RUN curl -L https://packagecloud.io/github/git-lfs/gpgkey | apt-key add - \
     && curl -fsSLk http://deb.nodesource.com/setup_12.x | bash \
     && apt-get install -y debian-archive-keyring apt-transport-https nodejs 
