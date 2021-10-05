@@ -1,4 +1,4 @@
-FROM ruby:2.6.4-buster
+FROM ruby:2.7.4-buster
 
 RUN apt-get install -y ca-certificates \
     && apt-get install -y libgnutls30 \
